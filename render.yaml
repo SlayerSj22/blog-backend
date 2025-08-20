@@ -6,11 +6,13 @@ services:
     buildCommand: "./mvnw clean package -DskipTests"
     startCommand: "java -jar target/*.jar"
     envVars:
+      - key: PORT
+        value: 8080
       - key: DATABASE_URL
-        sync: false
+        value: jdbc:postgresql://dpg-d2hsf5gdl3ps73b0orug-a.oregon-postgres.render.com:5432/blogdb_976s
       - key: DATABASE_USER
-        sync: false
+        value: blogdb_976s_user
       - key: DATABASE_PASSWORD
-        sync: false
+        value: 4V1ZNJ3AbP8KkOLY7KT1KZHUas1tocW5
       - key: JWT_SECRET
-        sync: false
+        value: my-very-secret-key-that-should-be-strong-and-long
